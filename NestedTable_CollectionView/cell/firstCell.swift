@@ -26,9 +26,7 @@ class firstCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDe
         // Initialization code
         cv.delegate  = self
         cv.dataSource = self
-        width = 300
-        let layout = cv.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.itemSize = CGSize(width: (width - 20) / 3, height: (width - 20) / 3)
+        
         
         
     }

@@ -18,7 +18,8 @@ class NestedTable_CollectionView: UIViewController, UITableViewDelegate,UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tb.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! firstCell
         
-        cell.width = view.frame.size.width
+        let layout = cell.cv.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.itemSize = CGSize(width: (tb.frame.size.width - 60) / 3, height: (tb.frame.size.width - 60) / 3)
         
         return cell
     }
