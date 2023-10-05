@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="mainnested" id="BYZ-38-t0r" customClass="ViewController" customModule="NestedTable_CollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="YuR-iQ-Udj">
+                                <rect key="frame" x="0.0" y="373.66666666666669" width="393" height="104.66666666666669"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07v-x0-6Qi">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="NestedTable_ CollectionView"/>
+                                        <connections>
+                                            <action selector="nestedBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qXC-Jy-TFw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K7X-5J-8dO">
+                                        <rect key="frame" x="0.0" y="50.333333333333314" width="393" height="54.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="ScrollViewNestedTable_CollectionVieiw Dynamic"/>
+                                        <connections>
+                                            <action selector="scrollNestedBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D4n-uY-bu7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="YuR-iQ-Udj" secondAttribute="trailing" id="5rR-e0-GXp"/>
+                            <constraint firstItem="YuR-iQ-Udj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="A6c-UX-Zgt"/>
+                            <constraint firstItem="YuR-iQ-Udj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="j0I-Um-qfq"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="114" y="-27"/>
+        </scene>
+        <!--Nested Table Collection View-->
+        <scene sceneID="a4g-9T-HW5">
+            <objects>
+                <viewController storyboardIdentifier="nested" id="hfY-M1-iM1" customClass="NestedTable_CollectionView" customModule="NestedTable_CollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mgf-nJ-aMM">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.backward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="NKi-DJ-Fp2">
+                                <rect key="frame" x="16" y="82" width="24" height="18.333333333333329"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="Bsn-50-x0M"/>
+                                    <constraint firstAttribute="width" constant="24" id="ol0-v6-Z45"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mUP-O7-lEl">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="277" id="s55-I6-UZF" customClass="firstCell" customModule="NestedTable_CollectionView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="277"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="s55-I6-UZF" id="VIj-3n-jWb">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="277"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Twt-4T-1IT">
+                                                    <rect key="frame" x="36" y="19" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pJo-Wp-5hJ" customClass="DynamicHeightCollectionView" customModule="NestedTable_CollectionView" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="48" width="353" height="210"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="P2b-Ob-xmC">
+                                                        <size key="itemSize" width="128" height="128"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="M2q-T4-CDV" customClass="nestedCollectionCell" customModule="NestedTable_CollectionView" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="NLG-F4-VlD">
+                                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <color key="backgroundColor" red="1" green="0.67302451789999995" blue="0.55235729339999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            </collectionViewCellContentView>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                </collectionView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="pJo-Wp-5hJ" secondAttribute="bottom" constant="8" id="6Yy-P8-UXm"/>
+                                                <constraint firstItem="Twt-4T-1IT" firstAttribute="leading" secondItem="VIj-3n-jWb" secondAttribute="leadingMargin" constant="16" id="AWZ-Ph-bAd"/>
+                                                <constraint firstItem="pJo-Wp-5hJ" firstAttribute="top" secondItem="Twt-4T-1IT" secondAttribute="bottom" constant="8" id="Ngs-T4-Yvz"/>
+                                                <constraint firstItem="Twt-4T-1IT" firstAttribute="top" secondItem="VIj-3n-jWb" secondAttribute="topMargin" constant="8" id="ReB-nD-mzp"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="pJo-Wp-5hJ" secondAttribute="trailing" id="ZND-1m-Vgy"/>
+                                                <constraint firstItem="pJo-Wp-5hJ" firstAttribute="leading" secondItem="VIj-3n-jWb" secondAttribute="leadingMargin" id="nMA-cR-JYB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cv" destination="pJo-Wp-5hJ" id="ZVi-6L-KCz"/>
+                                            <outlet property="header" destination="Twt-4T-1IT" id="JlX-Vf-0VL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vne-t0-Ute"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mUP-O7-lEl" firstAttribute="leading" secondItem="vne-t0-Ute" secondAttribute="leading" id="3YB-iz-dAe"/>
+                            <constraint firstItem="vne-t0-Ute" firstAttribute="trailing" secondItem="mUP-O7-lEl" secondAttribute="trailing" id="7wM-wx-toW"/>
+                            <constraint firstItem="mUP-O7-lEl" firstAttribute="top" secondItem="NKi-DJ-Fp2" secondAttribute="bottom" id="MhI-mU-SU7"/>
+                            <constraint firstItem="NKi-DJ-Fp2" firstAttribute="leading" secondItem="vne-t0-Ute" secondAttribute="leading" constant="16" id="RqD-Nk-Kzl"/>
+                            <constraint firstItem="NKi-DJ-Fp2" firstAttribute="top" secondItem="vne-t0-Ute" secondAttribute="top" constant="20" id="UOw-ud-Ike"/>
+                            <constraint firstItem="vne-t0-Ute" firstAttribute="bottom" secondItem="mUP-O7-lEl" secondAttribute="bottom" id="VfJ-Vw-lF2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backBtn" destination="NKi-DJ-Fp2" id="ZeI-HS-V8F"/>
+                        <outlet property="tb" destination="mUP-O7-lEl" id="cbS-5C-StN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="omb-AD-CPw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="933.58778625954199" y="-27.464788732394368"/>
+        </scene>
+        <!--Scroll View Table Collection View Nested Dynamic-->
+        <scene sceneID="8BM-ov-yp9">
+            <objects>
+                <viewController storyboardIdentifier="scrollnested" id="hXq-Qa-SQ2" customClass="ScrollViewTable_CollectionViewNestedDynamic" customModule="NestedTable_CollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WLj-E5-gp9">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.backward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="BkR-rc-pB4">
+                                <rect key="frame" x="16" y="82" width="24" height="18.333333333333329"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="6IE-l0-uOU"/>
+                                    <constraint firstAttribute="height" constant="24" id="L3T-5U-mwP"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Xv0-w8-DW2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BkR-rc-pB4" firstAttribute="top" secondItem="Xv0-w8-DW2" secondAttribute="top" constant="20" id="Hgr-if-3g2"/>
+                            <constraint firstItem="BkR-rc-pB4" firstAttribute="leading" secondItem="Xv0-w8-DW2" secondAttribute="leading" constant="16" id="ciZ-Zn-0XF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backBtn" destination="BkR-rc-pB4" id="M7V-DQ-qlZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bw4-ym-DXu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1673" y="-25"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.backward" catalog="system" width="128" height="95"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
