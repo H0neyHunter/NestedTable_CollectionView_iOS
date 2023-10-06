@@ -9,6 +9,8 @@ import UIKit
 
 class nestedCollectionCell: UICollectionViewCell {
 
+    @IBOutlet weak var imageName: UILabel!
+    @IBOutlet weak var image: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         
